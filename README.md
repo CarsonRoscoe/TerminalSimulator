@@ -5,10 +5,12 @@ A small C program created with the intention of learning how to use fork, pipes 
 This was built and tested on Fedora, however it should run on any *nix platform.
 
 To accomplish this goal of learning fork/pipes/signals, all input processing in the terminal is disabled at the start of the program and the program was built assuming it must adhere to the following constraints:  
-* typing 'E' will send the input to the other process to be interpreted
-* typing 'T' will quit the program typing 'K'will remove all characters preceding it 
-* typing 'X' will remove the previous character 
-* all 'a' characters will be replaced with 'z' characters in the output.
+* Typing 'E' will send the input to the other process to be interpreted. It is, essentially, the enter key.
+* Typing 'T' will quit the program with natural termination. All processes should kill themselves off after completing their tasks.
+* Typing 'K' will remove all characters preceding it.
+* Typing 'X' will remove the previous character. It is, essentially, the backspace key once interpreted.
+* Typing '^K' (control-K) will kill all processes instantly. It is, essentially, the control-C key.
+* All 'a' characters will be translated to 'z' characters in the output.
 
 # How To Compile
 
